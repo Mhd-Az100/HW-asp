@@ -17,6 +17,7 @@ namespace HW_asp
         protected void Button1_Click(object sender, EventArgs e)
         {
             Response.Cookies["name"].Value = TextBox1.Text;
+
             Response.Cookies["name"].Expires = DateTime.Now.AddMinutes(1);
             TextBox1.Text = "";
 
