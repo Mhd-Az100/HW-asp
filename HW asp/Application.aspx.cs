@@ -7,17 +7,17 @@ using System.Web.UI.WebControls;
 
 namespace HW_asp
 {
-    public partial class page_2 : System.Web.UI.Page
+    public partial class WebForm1 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string name = Request.QueryString.Get("name");
-            Response.Write("hello" + name);
+
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            CheckBox1.Checked = true;
+            Application["a"] = "application";
+            TextBox1.Text = Application["a"].ToString();
         }
     }
 }

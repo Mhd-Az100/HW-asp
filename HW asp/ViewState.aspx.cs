@@ -7,17 +7,17 @@ using System.Web.UI.WebControls;
 
 namespace HW_asp
 {
-    public partial class page_2 : System.Web.UI.Page
+    public partial class ViewState : System.Web.UI.Page
     {
+        int count = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
-            string name = Request.QueryString.Get("name");
-            Response.Write("hello" + name);
+            if (!IsPostBack) TextBox1.Text = "0";
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            CheckBox1.Checked = true;
+            if (ViewState["Click"] != null) count = (int)ViewState["Click"] + 1; TextBox1.Text = count.ToString(); ViewState["Click"] = count;
         }
     }
 }

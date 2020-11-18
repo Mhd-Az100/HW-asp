@@ -7,17 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace HW_asp
 {
-    public partial class page_1 : System.Web.UI.Page
+    public partial class hidden_field : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
-        }
-
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            TextBox2.Text = TextBox1.Text;
-            TextBox1.Text = null;
         }
     }
 }
